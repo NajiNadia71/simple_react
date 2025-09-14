@@ -1,4 +1,3 @@
-import * as React from 'react';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
 import { ReactRouterAppProvider } from '@toolpad/core/react-router';
@@ -6,6 +5,7 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import AssignmentAddIcon from '@mui/icons-material/AssignmentAdd';
 import { Outlet } from 'react-router';
 import type { Navigation } from '@toolpad/core';
+import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 
 const NAVIGATION: Navigation = [
   {
@@ -29,6 +29,24 @@ const NAVIGATION: Navigation = [
     segment: 'charts',
     title: 'chart',
     icon: < BarChartIcon/>,
+    
+     children: [
+      {
+        segment: 'info',
+        title: 'sample-info',
+        icon: <BarChartIcon />,
+      },
+       {
+        segment: 'sales',
+        title: 'sales',
+        icon: <BarChartIcon />,
+      },
+      {
+        segment: 'table',
+        title: 'table',
+        icon: <BarChartIcon />,
+      },
+    ],
   },
 ];
 
@@ -39,8 +57,8 @@ export default function App() {
     <ReactRouterAppProvider navigation={NAVIGATION} 
     
     branding={{
-      logo: <img src="https://mui.com/static/logo.png" alt="MUI logo" />,
-      title: 'DEMO Test',
+      logo:  < AutoFixHighIcon/>,
+      title: 'Uni Guide',
       homeUrl: '/toolpad/core/introduction',
     }}
     

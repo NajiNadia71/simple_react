@@ -8,6 +8,9 @@ import Layout from './layouts/dashboard';
 import DataGridDemo from './pages/DataGridDemo';
 import StackBars from './pages/StackBars';
 import CustomizedSteppers from './pages/CustomizedSteppers';
+import FoodTable from './pages/FoodTable';
+import infoSample from './pages/infoSample';
+
 const router = createBrowserRouter([
   {
     Component: App, // root layout route
@@ -34,8 +37,16 @@ const router = createBrowserRouter([
           }
           ,
           {
-            path: 'charts',
+            path: 'charts/sales',
             Component:StackBars ,
+          },
+          {
+            path: 'charts/table',
+            Component:FoodTable ,
+          },
+          {
+            path: 'charts/info',
+            Component:infoSample ,
           },
           ],
       },
